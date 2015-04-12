@@ -12,7 +12,7 @@
 
 makeCacheDF <- function(cachePowerData = data.frame()) {
   set <- function() { ## csvFile to read
-    if(!exists("uciPowerDataREAD", mode="function")) {
+    if(!exists("uciPowerDataREAD")) {
       uciPowerDataREAD <- "Full Data file already read"
       cachePowerData <<- read.csv(file="household_power_consumption.txt", 
                                         header=TRUE, 
